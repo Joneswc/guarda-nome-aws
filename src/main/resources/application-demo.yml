@@ -1,8 +1,12 @@
+server:
+  port: 5000
+
 spring:
   jpa:
     hibernate:
     ddl-auto: update
   datasource:
-    url: jdbc:mysql://localhost:3306/aws_names?useSSL=false&useTimezone=true&serverTimezone=UTC
-    username: root
-    password: 1234
+    url: jdbc:mysql://awsnamesdb.cdpt9yr9jxab.us-east-2.rds.amazonaws.com:3306/aws_names?useSSL=false&useTimezone=true&serverTimezone=UTC
+    username: admindb
+    password: course123
+    pool-size: 30
