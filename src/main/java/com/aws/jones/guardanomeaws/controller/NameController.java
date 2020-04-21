@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/name")
+@RequestMapping
 public class NameController {
 
     private NameRepository nameRepository;
@@ -17,7 +17,20 @@ public class NameController {
         this.nameRepository = nameRepository;
     }
 
+    @PostMapping("/memoname")
+    public ResponseEntity memoName( @RequestBody Name name ){
+        Name nm = new Name();
+        nm.setName(name.getName());
+        return ResponseEntity.ok("Hello, " + nm.getName());
+    }
+
     @GetMapping
+    public ResponseEntity started(){
+        System.out.println("started");
+        return ResponseEntity.ok("Great Times Are Comming");
+    }
+
+    @GetMapping("names")
     public List names(){
         return (List) nameRepository.findAll();
     }
