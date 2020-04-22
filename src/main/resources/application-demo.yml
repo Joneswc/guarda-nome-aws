@@ -1,3 +1,7 @@
+soring:
+  profiles:
+    active: @spring.profiles.active@
+
 server:
   port: 5000
 
@@ -5,8 +9,11 @@ spring:
   jpa:
     hibernate:
     ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
   datasource:
-    url: jdbc:mysql://awsnamesdb.cdpt9yr9jxab.us-east-2.rds.amazonaws.com:3306/aws_names?useSSL=false&useTimezone=true&serverTimezone=UTC
+    url: jdbc:mysql://awsnamesdb.cdpt9yr9jxab.us-east-2.rds.amazonaws.com:3306/coursenamedb
     username: admindb
     password: course123
     pool-size: 30
