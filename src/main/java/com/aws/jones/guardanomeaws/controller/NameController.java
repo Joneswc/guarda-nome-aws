@@ -2,6 +2,9 @@ package com.aws.jones.guardanomeaws.controller;
 
 import com.aws.jones.guardanomeaws.model.Name;
 import com.aws.jones.guardanomeaws.repository.NameRepository;
+import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
+import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
+import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
